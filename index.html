@@ -210,19 +210,48 @@
             <p>Get updates on sales, specials and more</p>
             <input class="form-control" type="text" placeholder="Your Email">
             <br>
-            <button class="panda-btn-buy-now">SUBMIT</button>
+            <button id="clickHandler"   class="panda-btn-buy-now">SUBMIT</button>
           </div>
         </section>
     </main>
     <!-- footer section  -->
     <footer class="mt-5 text-center">
-          <p><small>©2020. Panda Commerce. All rights reserved. Sofia, Bulgaria.</small></p>  
+          <p><small>©2021. Panda Commerce. All rights reserved. Tanju, Bangladesh.</small></p>  
     </footer>
 
 
-
-
     <!-- bootstrap script here -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+
+    <!-- //Task-1 connecting with a external JS file  -->
+    <script src="panda-script.js"></script>
+
+    <script>
+      //Task-2 chaanging h2 text color
+
+    const textColor = document.getElementsByTagName('h2');
+    for(text of textColor){
+      text.style.color = 'lightBlue';
+    }
+
+      //Task-3 changing backpack background color
+     document.getElementById('bag').style.backgroundColor = 'tomato';
+
+     //Task-4 add border radius in card class
+
+     const cardRadius = document.getElementsByClassName('card');
+     for(const radius of cardRadius){
+       radius.style.borderRadius = '30px';
+     }
+
+     //Task-5 adding a click handler on first buy now button
+
+     const clickButton = document.getElementById('clickHandler');
+     clickButton.onclick = function(){
+       console.log('You have clicked me');
+     }
+      
+    </script>
 </body>
 </html>
